@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-from get_elements_from_html import getElementsFromHTML
 
 import urlparse
 import mechanize
@@ -17,7 +16,7 @@ def getAllPagesFromWebsite(url):
 
 	while len(urls) > 0:
 		try:
-			print len(urls)
+			print urls[0]
 			
 			br.open(urls[0])
 			urls.pop(0)
@@ -49,4 +48,4 @@ def getElementsFromHTML(brws):
 
 website = "http://www.filmeonline.biz/"
 getAllPagesFromWebsite(website)
-getElementsFromHTML(br)
+#getElementsFromHTML(br)
